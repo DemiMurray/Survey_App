@@ -11,12 +11,16 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { SurveyQuestionsComponent } from './survey-questions/survey-questions.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatMenuModule } from '@angular/material/menu';
+import { SurveyHistoryComponent } from './survey-history/survey-history.component';
 
 @NgModule({
-  declarations: [		
+  declarations: [			
     AppComponent,
       LoginComponent,
-      SurveyQuestionsComponent
+      SurveyQuestionsComponent,
+      SurveyHistoryComponent
    ],
   imports: [
     BrowserModule,
@@ -27,7 +31,9 @@ import { SurveyQuestionsComponent } from './survey-questions/survey-questions.co
     MatInputModule,
     FormsModule,
     ReactiveFormsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatToolbarModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -8,7 +8,7 @@
         <input matInput placeholder="email@example.com" formControlName="email" required>
         <mat-error
           *ngIf="loginForm.controls['email'].hasError('email') && !loginForm.controls['email'].hasError('required')">
-          Please enter a valid email address
+          Please enter a <strong>valid</strong> email address
         </mat-error>
         <mat-error *ngIf="loginForm.controls['email'].hasError('required')">
           Email is <strong>required</strong>

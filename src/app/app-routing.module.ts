@@ -1,3 +1,4 @@
+import { SurveyHistoryComponent } from './survey-history/survey-history.component';
 import { SurveyQuestionsComponent } from './survey-questions/survey-questions.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -10,8 +11,17 @@ const routes: Routes = [
     component: LoginComponent,
   },
   {
+    path: 'login',
+    component: LoginComponent,
+  },
+  {
     path: 'survey-questions',
     component: SurveyQuestionsComponent,
+    // canActivate: [AuthGuard]
+  },
+  {
+    path: 'survey-history',
+    component: SurveyHistoryComponent,
     // canActivate: [AuthGuard]
   },
 ];
