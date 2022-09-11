@@ -2,6 +2,7 @@
   <mat-toolbar-row>
     <span>Survey App</span>
     <button mat-icon-button [matMenuTriggerFor]="menu" class="menuBtn">
+      {{currentUser.user.firstName}} {{currentUser.user.lastName}}
       <mat-icon>menu</mat-icon>
     </button>
     <mat-menu #menu="matMenu">

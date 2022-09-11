@@ -8,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./survey-history.component.scss']
 })
 export class SurveyHistoryComponent implements OnInit {
-
+  currentUser: any;
   constructor(private authService:AuthenticationService, private router: Router) { }
 
   ngOnInit() {
+    this.currentUser = this.authService.currentUserValue;
   }
 
   logout(){

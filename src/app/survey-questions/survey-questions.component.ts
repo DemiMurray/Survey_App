@@ -10,8 +10,9 @@ import { Component, OnInit } from '@angular/core';
 export class SurveyQuestionsComponent implements OnInit {
 
   constructor(private authService: AuthenticationService, private router: Router) { }
-
+  currentUser: any;
   ngOnInit() {
+    this.currentUser = this.authService.currentUserValue;
   }
 
   logout(){
