@@ -1,0 +1,32 @@
+.container{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 30%;
+    left: 38%;
+    width: 500px;
+}
+
+.visibilityBtn{
+    border: none;
+    background: none;
+}
+
+mat-form-field{
+    display: block;
+    margin-top: 10px;
+}
+
+.loginBtn{
+    margin-top: 10px;
+    width: 100%;
+    font-size: medium;
+}
+
+h1{
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 38px;
+    margin-bottom: 30px;
+}
