@@ -17,12 +17,12 @@ const routes: Routes = [
   {
     path: 'survey-questions',
     component: SurveyQuestionsComponent,
-    // canActivate: [AuthGuard]
+    canActivate: [AuthGuard]
   },
   {
     path: 'survey-history',
     component: SurveyHistoryComponent,
-    // canActivate: [AuthGuard]
+    canActivate: [AuthGuard]
   },
 ];
 

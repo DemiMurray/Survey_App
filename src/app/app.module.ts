@@ -14,7 +14,8 @@ import { SurveyQuestionsComponent } from './survey-questions/survey-questions.co
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
 import { SurveyHistoryComponent } from './survey-history/survey-history.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 @NgModule({
   declarations: [			
     AppComponent,
@@ -33,7 +34,9 @@ import { SurveyHistoryComponent } from './survey-history/survey-history.componen
     ReactiveFormsModule,
     MatButtonModule,
     MatToolbarModule,
-    MatMenuModule
+    MatMenuModule,
+    HttpClientModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
