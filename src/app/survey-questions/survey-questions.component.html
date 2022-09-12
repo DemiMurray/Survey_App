@@ -20,4 +20,36 @@
 
 <div class="container">
   <h1>Survey Questions</h1>
+
+  <mat-card class="questionCard">
+    <mat-card-title>{{questions[index-1].text}}</mat-card-title>
+    <mat-card-subtitle>Question {{index}}</mat-card-subtitle>
+    <mat-card-content>
+      <div *ngIf="questions[index-1].format == 1">
+        <mat-checkbox class="example-margin" color="primary" (change)="changeMultiInput($event)" class="input"
+          *ngFor="let option of questions[index-1].options" [value]="option">
+          {{option}}
+        </mat-checkbox>
+      </div>
+      <div *ngIf="questions[index-1].format == 2">
+        <mat-form-field appearance="fill">
+          <mat-label></mat-label>
+          <input matInput required (change)="changeInput($event)" [(ngModel)]="answer">
+          <!-- <mat-error
+            *ngIf="index-1.hasError('required')">
+            Field is <strong>required</strong>
+          </mat-error> -->
+        </mat-form-field>
+      </div>
+      <div *ngIf="questions[index-1].format == 0">
+        <mat-radio-group aria-label="Select an option" required (change)="changeInput($event)" [(ngModel)]="answer">
+          <mat-radio-button value="{{option}}" *ngFor="let option of questions[index-1].options" class="input">{{option}}</mat-radio-button>
+        </mat-radio-group>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-flat-button color="primary" *ngIf="index < 5" (click)="nextQuestion()" [disabled]="!inputReceived">Next</button>
+      <button mat-flat-button color="primary" *ngIf="index == 5" (click)="submit()" [disabled]="!inputReceived">Submit</button>
+    </mat-card-actions>
+  </mat-card>
 </div>

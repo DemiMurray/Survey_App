@@ -2,7 +2,7 @@
   <img src="">
   <h1>Login</h1>
   <div class="formContainer">
-    <form [formGroup]="loginForm" (submit)="login()">
+    <form [formGroup]="loginForm">
       <mat-form-field appearance="fill">
         <mat-label>Enter your email</mat-label>
         <input matInput placeholder="email@example.com" formControlName="email" required>
@@ -27,7 +27,8 @@
         </mat-error>
       </mat-form-field>
 
-      <button mat-flat-button color="primary" class="loginBtn" type="submit" [disabled]="loginForm.invalid">Login</button>
+      <button mat-flat-button color="primary" class="loginBtn" type="submit" [disabled]="loginForm.invalid" (click)="login()">Login</button>
+      <p>Don't have an account? <strong class="register" routerLink="/register">Register here</strong></p>
     </form>
   </div>
 </div>

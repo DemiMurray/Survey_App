@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
       (data) => {
         console.log('successful');
         this.openSnackBar('Login Successful!');
-        this.router.navigate(['/survey-questions']);
+        this.router.navigate(['/survey-history']);
       },
       (error) => {
         console.log('unsuccessful');
@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
     );
   }
 
-  openSnackBar(message: string) {
+  openSnackBar(message: string){
     this.snackBar.open(message, 'OK',{
       duration: 5000
     });

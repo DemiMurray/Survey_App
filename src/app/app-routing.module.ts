@@ -1,3 +1,4 @@
+import { RegisterComponent } from './register/register.component';
 import { SurveyHistoryComponent } from './survey-history/survey-history.component';
 import { SurveyQuestionsComponent } from './survey-questions/survey-questions.component';
 import { NgModule } from '@angular/core';
@@ -13,6 +14,10 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
+  },
+  {
+    path: 'register',
+    component: RegisterComponent
   },
   {
     path: 'survey-questions',

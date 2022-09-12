@@ -20,4 +20,21 @@
 
 <div class="container">
   <h1>Survey History</h1>
+  <button mat-flat-button color="primary" (click)="downloadFiles(surveys)">Download Results</button>
+  <div class="cardContainer">
+    <mat-card class="surveyCard" *ngFor="let survey of surveys; let i = index">
+      <mat-card-title-group>
+        <mat-card-title>Survey {{i+1}} - {{survey.createdAt.substring(11,16)}} {{survey.createdAt.substring(0,10)}}</mat-card-title>
+        
+      </mat-card-title-group>
+      <mat-card-content>
+        <p><span class="title">Name: </span>{{survey.answers.name}}</p>
+        <p><span class="title">Has gym membership: </span>{{survey.answers.isGymMembership}}</p>
+        <p><span class="title">Gym classes considered taking: </span>{{survey.answers.gymClasses}}</p>
+        <p><span class="title">Fitness level: </span>{{survey.answers.fitnessLevel}}</p>
+        <p><span class="title">Email: </span>{{survey.answers.email}}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  
 </div>

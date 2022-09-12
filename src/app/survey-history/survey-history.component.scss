@@ -18,3 +18,22 @@ h1{
     margin-right: 100px;
     margin-left: auto;
 }
+
+.title{
+    font-size: medium;
+    font-weight: 500;
+}
+
+.surveyCard{
+    left: 400px;
+    margin: 20px;
+    width: 650px;
+}
+
+.cardContainer{
+    display: flex;
+    flex-direction: column;
+    /* left: 35000px; */
+    flex-wrap: wrap;
+    align-content: center;
+}

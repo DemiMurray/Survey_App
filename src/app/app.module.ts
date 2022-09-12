@@ -16,12 +16,18 @@ import { MatMenuModule } from '@angular/material/menu';
 import { SurveyHistoryComponent } from './survey-history/survey-history.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatCardModule } from '@angular/material/card';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatRadioModule } from '@angular/material/radio';
+import { RegisterComponent } from './register/register.component';
+
 @NgModule({
-  declarations: [			
+  declarations: [				
     AppComponent,
       LoginComponent,
       SurveyQuestionsComponent,
-      SurveyHistoryComponent
+      SurveyHistoryComponent,
+      RegisterComponent
    ],
   imports: [
     BrowserModule,
@@ -36,7 +42,10 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatToolbarModule,
     MatMenuModule,
     HttpClientModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]
