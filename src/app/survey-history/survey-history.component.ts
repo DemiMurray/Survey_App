@@ -41,7 +41,7 @@ export class SurveyHistoryComponent implements OnInit {
     this.router.navigate(['/login']);
   }
 
-  downloadFiles(data: any) {
+  downloadFile(data: any) {
     const replacer = (_key: any, value: null) => (value === null ? '' : value); // specify how you want to handle null values here
     const header = Object.keys(data[0]);
     let csv = data.map((row: { [x: string]: any }) =>

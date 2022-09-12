@@ -20,7 +20,7 @@
 
 <div class="container">
   <h1>Survey History</h1>
-  <button mat-flat-button color="primary" (click)="downloadFiles(surveys)">Download Results</button>
+  <button mat-flat-button color="primary" (click)="downloadFile(surveys)">Download Results</button>
   <div class="cardContainer">
     <mat-card class="surveyCard" *ngFor="let survey of surveys; let i = index">
       <mat-card-title-group>
